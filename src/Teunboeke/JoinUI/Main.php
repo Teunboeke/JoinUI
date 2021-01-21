@@ -22,10 +22,8 @@ class Main extends PluginBase implements Listener, form {
      $name = $player->getName();
      $this->openMyForm($sender);
    }
-   return true;
-}
-
-     public function openMyForm(Player $player){
+   
+   public function openMyForm(Player $player){
      
      $this->data = [];
      $this->data["type"] = "form";
@@ -34,13 +32,5 @@ class Main extends PluginBase implements Listener, form {
      $this>data["buttons"] = [];
      $player->sendForm($this);
     }
+ }   
     
-    public function handleResponse(Player $player, $data); void
-    {
-    
-    }
-    
-    public function jsonSerialize()
-    {
-      return $this->data;
-    }

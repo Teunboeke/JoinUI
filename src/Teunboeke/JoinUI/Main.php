@@ -5,7 +5,7 @@ namespace Teunboeke\JoinUI;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\form\Form;
 use pocketmine\Server;
 

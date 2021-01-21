@@ -7,6 +7,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\player\PlayerJoinEvent;
 use pocketmine\form\Form;
+use pocketmine\Server;
 
 class Main extends PluginBase implements Listener {
 

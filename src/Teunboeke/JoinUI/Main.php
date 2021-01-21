@@ -27,10 +27,12 @@ class Main extends PluginBase implements Listener, form {
      
      $this->data = [];
      $this->data["type"] = "form";
+      
      $this->data["title"] = "Welcome to CloudNetwork";
      $this->data["content"] = "Welcome to CloudNetwork this is a test";
+      
      $this>data["buttons"] = [];
      $player->sendForm($this);
-    }
+   }
  }   
     

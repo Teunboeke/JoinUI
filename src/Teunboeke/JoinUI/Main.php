@@ -23,11 +23,8 @@ class Main extends PluginBase implements Listener, form {
      $this->openMyForm($sender);
    }
  }
- 
- return true;
-}
 
-public function openMyForm(Player $player){
+     public function openMyForm(Player $player){
      
      $this->data = [];
      $this->data["type"] = "form";

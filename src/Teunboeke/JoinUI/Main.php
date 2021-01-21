@@ -22,7 +22,6 @@ class Main extends PluginBase implements Listener, form {
      $name = $player->getName();
      $this->openMyForm($sender);
    }
-   break;
  }
  
  return true;

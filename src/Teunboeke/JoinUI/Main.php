@@ -8,7 +8,7 @@ use pocketmine\event\Listener;
 use pocketmine\player\PlayerJoinEvent;
 use pocketmine\form\Form;
 
-class Main extends PluginBase implements Listener, form {
+class Main extends PluginBase implements Listener {
 
    public $data = [];
 

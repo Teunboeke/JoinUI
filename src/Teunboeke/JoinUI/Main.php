@@ -22,7 +22,7 @@ class Main extends PluginBase implements Listener {
      $player = $event->getPlayer();
      $name = $player->getName();
       
-     $this->openMyForm($sender);
+     $this->openMyForm($player);
    }
    
    public function openMyForm(Player $player){

@@ -36,7 +36,15 @@ class Main extends PluginBase implements Listener {
          $player->sendMessage($this->getConfig()->get("joinui-close"));
           return true; 
      }
+       
+     switch ($result) {  
+            case 0: 
+         $player->sendMessage($this->getConfig()->get("joinui-close"));   
+         break;
+     }
         
+   });
+                
      $form->setTitle($this->getConfig()->get("joinui-title"));
      $form->setContent(str_replace(["{player}", "&"], [$player->getName(), "§"], $this->getConfig()->get("joinui-message")));
      $form->addButton($this->getConfig()->get("joinui-button"));   

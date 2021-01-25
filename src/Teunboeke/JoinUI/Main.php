@@ -27,15 +27,23 @@ class Main extends PluginBase implements Listener {
    }
    
    public function openUI(Player $player)
-      
+   } 
      $form = $plugin->createSimpleForm(function (Player $player, $data) {
-     
-     $this->data = [];
-     $this->data["type"] = "form";     
-     $this->data["title"] = "Welcome to CloudNetwork";
-     $this->data["content"] = "Welcome to CloudNetwork this is a test";      
-     $this->data["buttons"] = [];
-     $player->sendForm($this);
+        
+     $result = $data;
+        
+     if ($result === null) {    
+         $player->sendMessage($this->getConfig()->get("joinui-close"));
+          return true; 
+     }
+        
+     $form->setTitle($this->getConfig()->get("joinui-title"));
+     $form->setContent(str_replace(["{player}", "&"], [$player->getName(), "§"], $this->getConfig()->get("joinui-message")));
+     $form->addButton($this->getConfig()->get("joinui-button"));   
+        
+     $player->sendForm($form);
+        
+     return $form;    
    }
  }   
     

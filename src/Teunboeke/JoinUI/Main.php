@@ -19,17 +19,27 @@ class Main extends PluginBase implements Listener {
    
    public function onJoin(PlayerJoinEvent $event){
    
+     if ($this->getConfig()->get("enabled-joinui") == "true") {  
      $player = $event->getPlayer();
      $name = $player->getName();
      $this->openUI($player); 
       
      $this->openMyForm($player);
    }
-   
+    
+      if ($this->getConfig()->get("enabled-joinui") == "false") {  
+                  
+         $player = $event->getPlayer();
+         
+          $player->sendMessage($this->getConfig()->get("no-joinui-message"));
+         }
+      }
+   }
+          
    public function openUI(Player $player)
    } 
      $form = $plugin->createSimpleForm(function (Player $player, $data) {
-        
+              
      $result = $data;
         
      if ($result === null) {    

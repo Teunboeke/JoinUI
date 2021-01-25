@@ -8,6 +8,8 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\form\Form;
 use pocketmine\Server;
+use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat as Color;
 
 class Main extends PluginBase implements Listener {
 

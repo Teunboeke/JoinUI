@@ -21,11 +21,14 @@ class Main extends PluginBase implements Listener {
    
      $player = $event->getPlayer();
      $name = $player->getName();
+     $this->openUI($player); 
       
      $this->openMyForm($player);
    }
    
-   public function openMyForm(Player $player){
+   public function openUI(Player $player)
+      
+     $form = $plugin->createSimpleForm(function (Player $player, $data) {
      
      $this->data = [];
      $this->data["type"] = "form";     
